@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>659</width>
-    <height>596</height>
+    <width>937</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,9 +50,15 @@
       <rect>
        <x>0</x>
        <y>240</y>
-       <width>61</width>
+       <width>81</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="singleStep">
+      <double>0.005000000000000</double>
      </property>
     </widget>
     <widget class="QLineEdit" name="txtRollMin">
@@ -65,7 +71,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>-0.05</string>
+      <string>-.03</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -81,7 +87,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>0.05</string>
+      <string>.03</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -97,7 +103,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>-0.05</string>
+      <string>-.03</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -108,9 +114,15 @@
       <rect>
        <x>80</x>
        <y>240</y>
-       <width>61</width>
+       <width>81</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="singleStep">
+      <double>0.005000000000000</double>
      </property>
     </widget>
     <widget class="QLineEdit" name="txtPitchMax">
@@ -123,7 +135,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>0.05</string>
+      <string>.03</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -139,7 +151,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>-0.1</string>
+      <string>-0.5</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -150,9 +162,15 @@
       <rect>
        <x>0</x>
        <y>480</y>
-       <width>61</width>
+       <width>81</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="singleStep">
+      <double>0.005000000000000</double>
      </property>
     </widget>
     <widget class="QLineEdit" name="txtYawMax">
@@ -165,7 +183,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>0.1</string>
+      <string>0.5</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -181,7 +199,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>0.5</string>
+      <string>.48</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -192,9 +210,15 @@
       <rect>
        <x>80</x>
        <y>480</y>
-       <width>61</width>
+       <width>81</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="singleStep">
+      <double>0.005000000000000</double>
      </property>
     </widget>
     <widget class="QLineEdit" name="txtThrustMax">
@@ -207,7 +231,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>0.6</string>
+      <string>0.52</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -428,13 +452,184 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>540</y>
-      <width>191</width>
+      <y>560</y>
+      <width>391</width>
       <height>17</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
     <property name="text">
      <string>Status</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblMode">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>560</y>
+      <width>421</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>Mode</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>40</y>
+      <width>291</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Gain</string>
+    </property>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>P</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>I</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>D</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spnP">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>8</number>
+     </property>
+     <property name="maximum">
+      <double>2.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.002000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.080000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spnI">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>8</number>
+     </property>
+     <property name="maximum">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.002000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.020000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spnD">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="decimals">
+      <number>8</number>
+     </property>
+     <property name="maximum">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.002000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.020000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnHover">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>520</y>
+      <width>171</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hover</string>
     </property>
    </widget>
   </widget>

@@ -20,5 +20,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     Socket.h \
     myglwidget.h
+LIBS += -lGLU
 
 FORMS    += mainwindow.ui
+INCLUDEPATH +=/usr/local/include/eigen3

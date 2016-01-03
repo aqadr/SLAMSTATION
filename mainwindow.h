@@ -33,13 +33,30 @@ public slots:
     void on_btnStart_released();
     void on_btnStop_released();
     void on_btnInit_released();
+    void on_btnHover_released();
+
+    //spinBoxes
+    void on_spnP_valueChanged(double value);
+    void on_spnI_valueChanged(double value);
+    void on_spnD_valueChanged(double value);
+
+    //MyGLWidget slots
+    void on_myGLWidget_statusChanged(string status);
+    void on_myGLWidget_modeChanged(string status);
+    void on_myGLWidget_writeDataToFile(string data);
 
 private:
-    void sliderMoved(QLineEdit*txtMin,QLineEdit*txtMax,int value,string tag);
+    void sliderMoved(QLineEdit*txtMin,QLineEdit*txtMax,QDoubleSpinBox*spn ,int value,string tag);
 
 private:
     Ui::MainWindow *ui;
     Socket*server_socket;
+    bool slamInitialized;
+    FILE 	*localPosData;
+
+
+public:
+    bool getSLAMInit();
 };
 
 #endif // MAINWINDOW_H
